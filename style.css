@@ -1,0 +1,198 @@
+*{
+	margin: 0
+}
+section{
+	height:100vh;
+	width:100%;
+	background-color: #000;
+	position: absolute;
+	background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png)repeat;
+}
+.monstro1{
+	height: 50%;
+	width: 50%;
+	bottom: 1%;
+	left: 47%;
+	background-color: #ffa500;
+	position: absolute;
+	animation:medo 3s infinite linear;
+	/*z-index:2;*/
+}
+.telhado{
+	width: 45%;
+	/*top: 23%;*/
+	left: 46.5%;
+	bottom: 51%;
+	border-left: 40px solid transparent;
+	border-right: 40px solid transparent;
+	border-bottom: 90px solid #800000;
+	position: absolute;
+}
+.boca{
+	position: absolute;
+	width: 50%;
+	height: 20%;
+	left: 30%;
+	bottom: 8%;
+	background-color:black;
+	/*transform: rotate(45deg);*/
+	border-radius: 50%;
+	animation: boca 3s infinite linear;
+	transform:rotate(-10deg);
+
+}
+.nariz{
+	position: absolute;
+	width: 4%;
+	height: 5%;
+	top: 75%;
+	left: 70%;
+	background-color: black;
+	border-radius: 50%;
+}
+.olho1{
+	position: absolute;
+	width: 28%;
+	height: 28%;
+	top: 15%;
+	left: 10%;
+	background-color:#8B4726;
+	transform: rotate(40deg);
+	border-radius: 100% 0%;
+	animation: olhando 1s infinite linear;
+
+}
+.olho2{
+	position: absolute;
+	width: 28%;
+	height: 28%;
+	top: 15%;
+	right: 10%;
+	background-color:#8B4726;
+	transform: rotate(0deg);
+	border-radius: 100% 0%;
+	animation: olhando 1s infinite linear;
+}
+
+.sobrancelha1{
+	position: absolute;
+	width: 20%;
+	height: 10%;
+	top: 8%;
+	left:18%;
+	background-color: #000;
+	transform:rotate(40deg);
+	border-radius: 100% 0%;
+	animation: sobrancelha 3s infinite linear;
+}
+.sobrancelha2{
+	position: absolute;
+	width: 20%;
+	height: 10%;
+	top: 8%;
+	right: 18%;
+	background-color: #000;
+	transform:rotate(-15deg);
+	border-radius: 100% 0%;
+	animation: sobrancelha 3s infinite linear;
+}
+.iris1{
+	width: 44px;
+	height: 45px;
+	background: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 4%;
+	left: 65%;
+}
+.iris2 {
+	width: 44px;
+	height: 45px;
+	background: black;
+	border-radius: 50%;
+	position: absolute;
+	top: 47%;
+	left: 8%;
+}
+.monstro2 {
+	height: 50%;
+	width: 50%;
+	bottom: 1%;
+	whr: 47%;
+	background-color: #ffa500;
+	position: absolute;
+	animation:medo 3s infinite linear;
+}
+
+.lua {
+	position: absolute;
+	/*z-index: 8;*/
+	margin-top: 50px;
+	margin-left: 50px;
+	width: 114px;
+	height: 114px;
+	border-radius: 50%;
+	background-color: #F6F6F6;
+	opacity: .9;
+	box-shadow: 0px 0px 64px 
+	rgba(158, 230, 254, 19);
+	transition: all 3s;	
+}
+.lua:hover{
+	transform: scale(1.8);
+}
+.pisca{
+	width:2%;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    
+    /*-moz-animation:move-background 70s linear infinite;
+  -ms-animation:move-background 70s linear infinite;
+  -o-animation:move-background 70s linear infinite;
+  -webkit-animation:move-background 70s linear infinite;
+  animation:move-background 70s linear infinite;*/
+	
+	
+
+}
+.nuvem{
+	width:100%;
+	height: 100vh;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+	/*background-size: 1000px 1000px;*/
+    position: all;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    animation: andar 3s infinite linear;
+}
+
+
+@keyframes olhando {
+  50% {background: red}
+  40% {transform:translatey (50px)}
+  
+}
+@keyframes medo {
+  50% {background:#8B4726}
+  40% {transform: translatey (-50px)}
+}
+@keyframes boca {
+  10% {background: #fff}
+  90% {transform: translatey (-50px)}
+}
+@keyframes sobrancelha {
+  40% {top: 10%;}
+  20% {top: 10%;}
+}
+@keyframes andar {
+	40% {left:10%;}
+	20% {left: 10%;}
+}
