@@ -1,5 +1,16 @@
-*{
-	margin: 0
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+/*body{
+	position: absolute;
+}*/
+header{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	z-index: 1;
 }
 section{
 	height:100vh;
@@ -7,11 +18,38 @@ section{
 	background-color: #000;
 	position: absolute;
 	background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png)repeat;
+	z-index: 2;
 }
-nav{
-	background-color: blue;
-	position: fixed;
+nav {
 	display: inline-flex;
+	width: 25px;
+	height: 20vh;
+	left: 30%;
+	font-size: 35px;
+	position: fixed;
+	z-index: 1;
+}
+p {
+	border-style: solid;
+	font-family: arial;
+	font-size: 30px;
+	color: green;
+	position: relative;
+	top: 70%;
+	left: 20%;
+	/*z-index: 1;*/
+}
+footer{
+	width: 100%;
+	position: relative;
+}
+.foto-nav{
+	width: 100%;
+}
+.foto-header{
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }
 .monstro1{
 	
@@ -28,16 +66,17 @@ nav{
 }
 .cabelo{
 	color: red;
-	width: 50%;
+	width: 55%;
 	height: 70%;
 	/*top: 20%;
-*/	left: 12%;
-	bottom: 90%;
+*/	right: 108vh;
+	bottom: 7%;
+	transform: rotate(182deg);
 	border-left: 70px solid transparent;
 	border-right: 70px solid transparent;
 	border-bottom: 60px solid #800000;
-	border-radius: 60% 60% 20% 20%;
-	position: absolute;
+	border-radius: 100% 100% 70% 70%;
+	position: relative;
 }
 .boca{
 	position: absolute;
@@ -49,7 +88,9 @@ nav{
 	/*transform: rotate(45deg);*/
 	animation: boca 3s infinite linear;
 	transform:rotate(-2deg);
-	border-radius: 20% 20% 50% 50%;
+	border-radius: 100% 100% 10% 10%;
+	border-top: 10px solid #000;
+	border-bottom: 10px solid #800000;
 
 }
 .nariz{
@@ -61,6 +102,7 @@ nav{
 	background-color: black;
 	border-radius: 50%;
 }
+
 .olho1{
 	position: absolute;
 	width: 28%;
@@ -126,24 +168,18 @@ nav{
 	left: 1%;
 }
 .monstro2 {
-	height: 65%;
-	width: 35%;
-	bottom: 1%;
-	left: 58%;
-	border-radius: 75%;
-	background-color: #6B8E23;
-	position: absolute;
 	height: 70%;
 	width: 30%;
 	bottom: 1%;
-	/*left: 2%;
-	border-radius: 50% 50% 25% 25%;
-	background-color: #CD853F;
-	position: absolute;*/
-	animation:medo monstro 3s infinite linear;
-	/*display: inline-flex;
-	align-items: flex-start;*/
+	left: 58%;
+	border-radius: 75%;
+	background-color: #00FA9A;
+	position: absolute;
+	animation: monstro 3s infinite linear;
 }
+/*.monstro2:hover{
+	transform: scale(0.1);
+	}*/
 .sobrancelha1-monstro2{
 	position: absolute;
 	width: 20%;
@@ -172,7 +208,7 @@ nav{
 	height: 28%;
 	top: 15%;
 	left: 16%;
-	background-color:#8B4726;
+	background-color:#7B68EE;
 	transform: rotate(80deg);
 	border-radius: 100% 0%;
 	/*animation: olhando 1s infinite linear;*/
@@ -183,7 +219,7 @@ nav{
 	height: 28%;
 	top: 15%;
 	right: 15%;
-	background-color:#8B4726;
+	background-color:#7B68EE;
 	transform: rotate(18deg);
 	border-radius: 100% 0%;
 	/*animation: olhando 1s infinite linear;*/
@@ -207,20 +243,18 @@ nav{
 	left: 8%;
 }
 .boca-monstro2{
+	color: #fff;
+	width: 50%;
+	height: 70%;
+	/*top: 20%;
+*/	left: 15%;
+	bottom: 12%;
+	/*transform: rotate(15deg);*/
+	border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	border-bottom: 60px solid #fff;
+	border-radius: 100% 100% 80% 80%;
 	position: absolute;
-	width: 40%;
-	height: 20%;
-	left: 25%;
-	bottom: 8%;
-	background-color:black;
-	/*transform: rotate(45deg);*/
-	border-radius: 70%;
-	animation: boca 3s infinite linear;
-	transform:rotate(-10deg);
-	border-left: 20px solid transparent;
-	border-right: 30px solid transparent;
-	border-bottom: 30px solid #800000;
-	border-radius: 60% 60% 70% 70%;
 }
 .nariz-monstro2{
 	position: absolute;
@@ -233,10 +267,10 @@ nav{
 }
 .lua {
 	position: absolute;
-	/*z-index: 8;*/
+	z-index: 8;
 	margin-top: 50px;
 	margin-left: 50px;
-	top: 17%;
+	top: 13%;
 	left: 37%;
 	width: 114px;
 	height: 114px;
@@ -272,15 +306,18 @@ nav{
 }
 .nuvem{
 	width:100%;
-	height: 100vh;
+	height: 100%;
 	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
 	/*background-size: 1000px 1000px;*/
-    position: all;
+    position: relative;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 3;
-    animation: andar 3s infinite linear;
+   /* z-index: 3;*/
+    opacity: .6;
+    animation: andar 7s infinite linear;
+  
+
 }
 
 
@@ -289,7 +326,7 @@ nav{
   40% {transform:translatey (50px)}
   
 }
-@keyframes medo {
+@keyframes monstro {
   50% {background:#8B4726}
   40% {transform: translatey (-50px)}
 }
@@ -301,11 +338,12 @@ nav{
   40% {top: 10%;}
   20% {top: 10%;}
 }
-@keyframes andar {
-	40% {left:10%;}
-	20% {left: 10%;}
-}
-@keyframes medo monstro {
-  50% {background:green}
+
+@keyframes medo {
+  50% {background:#FF4500}
   40% {transform: translatey (-50px)}
+}
+@keyframes andar {
+	from{right: 500px;}
+	to{right: 00px;}
 }
